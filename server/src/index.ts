@@ -15,7 +15,7 @@ class Server {
         this.app.set('port', process.env.PORT || 3000);// en caso de encontrar un puerto habilitado por el servicio de host la tomara, sino toma el puerto 3000
         this.app.use(morgan('dev'));// muestra las peticiones que se realizan al servidor
         this.app.use(cors());
-        this.app.use(express.json());
+        this.app.use(express.json());//comunicación con el frontend mediante json
         this.app.use(express.urlencoded({extended: false}));
 
     }

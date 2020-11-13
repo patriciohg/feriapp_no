@@ -19,7 +19,7 @@ class Server {
         this.app.set('port', process.env.PORT || 3000); // en caso de encontrar un puerto habilitado por el servicio de host la tomara, sino toma el puerto 3000
         this.app.use(morgan_1.default('dev')); // muestra las peticiones que se realizan al servidor
         this.app.use(cors_1.default());
-        this.app.use(express_1.default.json());
+        this.app.use(express_1.default.json()); //comunicación con el frontend mediante json
         this.app.use(express_1.default.urlencoded({ extended: false }));
     }
     routes() {
